@@ -64,13 +64,13 @@
 				<div class="h">本周最受欢迎TOP5</div>
 				<ul class="top5">
 					<li v-for="(item,index) in iconList" :key="index">
-						<div class="datay">
+						<router-link :to="'/Itemsss/'+item.pro_id">
 								<div><img :src="item.pro_img[0].url" /></div>
 							<div class="datas">
 								<div>{{item.pro_name}}</div>
 								<div class="zzz">{{item.pro_Joiner}}人已参加</div>
 							</div>
-						</div>
+						</router-link>
 					</li>
 				</ul>
 			</div>
@@ -282,7 +282,7 @@
 	 
 	 .tops{
 	 	width: 94%; 
-		height:25rem; 
+		height:28rem; 
 		background: #004b9e; 
 		border-radius: 7px; 
 		margin: auto;
@@ -314,7 +314,7 @@
 		 margin: 2rem;
 		 border-radius: 0.3125rem;
 	 }
-	 .datay{
+	 .tops ul a{
 		display: flex;
 		border-bottom: 0.4px solid #8c8c8c;
 
